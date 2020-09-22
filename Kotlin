@@ -1,1 +1,19 @@
+//Create and use variables (constants -> use val; variables -> use var)
 
+
+fun main() { 
+    val name = "Rover"
+    val age=10
+    println("Happy Birthday, ${name}!")
+    //Let's print a cake
+    println("   '''''   ")
+    println("   |||||   ")
+    println(" =========")
+    println("@@@@@@@@@@@")
+    println("{~@~@~@~@~}")
+    println("@@@@@@@@@@@")
+    //This print a empty line
+    println()
+    println("You are already ${age}!")
+    println("${age} is the very best age to celebrate!")
+}
