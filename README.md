@@ -1,4 +1,4 @@
-# hello-world
+# Learning Kotlin
 
 Hi Humans!
 Gustavo here, i'm from Brazil. I'm learning Kotlin and Android development.
