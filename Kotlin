@@ -1,4 +1,4 @@
-//# Create and use variables (constants -> use val; variables -> use var)
+//#1 Create and use variables (constants -> use val; variables -> use var)
 
 
 fun main() { 
@@ -16,4 +16,99 @@ fun main() {
     println()
     println("You are already ${age}!")
     println("${age} is the very best age to celebrate!")
+}
+
+
+//#2 Print a Birthday banner with a border (functions, arguments and loops)
+
+
+fun main(){
+    
+    val border = "'-._.-'"
+    val timesToRepeat = 4
+    /* e.g
+    	println("=======================")
+		println("Happy Birthday, Jhansi!")
+    	println("=======================")
+    
+    
+    Seting a function that print a border:	
+        
+        fun printBorder(){
+        	println("=======================")
+      	}
+        
+        printBorder()
+        println("Happy Birthday, Jhansi!")
+        printBorder()
+        
+    Using the repeat statement:
+    
+    	fun printBorder(){
+        	repeat(23){
+            	print("=")
+        	}
+        	println()
+    	}
+    
+    	printBorder()
+    	println("Happy Birthday, Jhansi!")
+    	printBorder()
+        
+    */
+    
+    fun printBorder(border:String, timesToRepeat: Int){
+        repeat(timesToRepeat){
+            print(border)
+        }
+        println()
+    }
+    
+    printBorder(border, timesToRepeat)
+    println("  Happy Birthday, Jhansi!")
+    printBorder(border, timesToRepeat)
+}
+
+
+//#3 Create a cake with the layers and candles
+
+
+fun main(){
+    val bottomLayerUnit="@"
+    val upperLayerUnit="="
+    val age=10
+    val timesToRepeat=age
+    fun bottomLayer(timesToRepeat: Int, bottomLayerUnit: String){
+        repeat(5){
+            repeat(timesToRepeat){
+                print(bottomLayerUnit)
+            }
+            println()
+        }
+        println()
+    }
+    fun upperLayer(timesToRepeat: Int, upperLayerUnit: String){
+        repeat(timesToRepeat){
+            print(upperLayerUnit)
+        }
+        println()
+    }
+    fun numberOfCandles(timesToRepeat: Int){
+        print(" ")
+        repeat(timesToRepeat){
+            print("'")
+        }
+        println()
+        print(" ")
+        repeat(timesToRepeat){
+            print("|")
+        }
+        println()
+    }
+    fun createCake(bottomLayerUnit: String, upperLayerUnit: String, timesToRepeat: Int){
+        numberOfCandles(timesToRepeat)
+        upperLayer(timesToRepeat + 2, upperLayerUnit)
+        bottomLayer(timesToRepeat + 2, bottomLayerUnit)
+    }
+    createCake(bottomLayerUnit, upperLayerUnit, timesToRepeat)
 }
